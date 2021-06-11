@@ -21,11 +21,13 @@ var numPerUtente = alert('Prova ricordare questi numeri in ordine:' + ' ' + numb
 
 // Da li parte un timer di 30 secondi.
 // Dopo 30 secondi l'utente deve inserire, uno alla volta, i numeri che ha visto precedentemente, tramite il prompt().
-// -----------test con 5 secondi per velocizzare i tempi !!!!!!!!!DA MODIFICARE!!!!!!!!!!!!------------------------
+
 
 var numUtente;
 var arrayUtente = []; 
 i = 0;
+
+
 
 setTimeout(functionTimer, 30000);
 function functionTimer (){
@@ -39,10 +41,10 @@ function functionTimer (){
         if (numUtente == 0 || numUtente > 100 || numUtente == isNaN){
             alert('Puoi inserire solo numeri da 1 a 100');
         }
-        if (numbers.includes(numUtente)){
+        if (numbers.includes(numUtente) && !arrayUtente.includes(numUtente)){
             arrayUtente.push(numUtente); 
-            console.log(numUtente);
-            console.log(arrayUtente);
+            // console.log(numUtente);
+            // console.log(arrayUtente);
         }
         i++;
     }
