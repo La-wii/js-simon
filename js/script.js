@@ -16,7 +16,7 @@ for (var i = 0; i < 5 ; i++){
 
 console.log(numbers);
 // Un alert() espone 5 numeri generati casualmente.
-var numPerUtente = alert('Prova ricordare questi numeri:' + ' ' + numbers); 
+var numPerUtente = alert('Prova ricordare questi numeri in ordine:' + ' ' + numbers); 
 
 
 // Da li parte un timer di 30 secondi.
@@ -33,16 +33,17 @@ function functionTimer (){
 
     alert('Sei pronto a giocare?');
 
-    while (i <= 5){
+    while (i < 5){
 
         numUtente = parseInt(prompt('inserisci i numeri'));
-        // arrayUtente.push(numUtente); 
-        console.log(arrayUtente);
-        if (numUtente > 0 || numUtente <= 100){
-            arrayUtente.push(numUtente); 
-        }
+
         if (numUtente == 0 || numUtente > 100 || numUtente == isNaN){
             alert('Puoi inserire solo numeri da 1 a 100');
+        }
+        if (numbers.includes(numUtente)){
+            arrayUtente.push(numUtente); 
+            console.log(numUtente);
+            console.log(arrayUtente);
         }
         i ++;
     }
@@ -51,10 +52,9 @@ function functionTimer (){
 
 
 
-// console.log(arrayUtente);
-// console.log(arrayUtente.length);
-
 // Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei numeri da indovinare sono stati individuati
+
+
 
 
 
