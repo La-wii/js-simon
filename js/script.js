@@ -20,30 +20,43 @@ var numPerUtente = alert('Prova ricordare questi numeri:' + ' ' + numbers);
 
 
 // Da li parte un timer di 30 secondi.
+
+// Dopo 30 secondi l'utente deve inserire, uno alla volta, i numeri che ha visto precedentemente, tramite il prompt().
 // test con 5 secondi per velocizzare i tempi !!!!!!!!!DA MODIFICARE!!!!!!!!!!!!
 
 var numUtente;
-var arrayUtente; 
+var arrayUtente = []; 
+i = 0;
 
 setTimeout(functionTimer, 5000);
 function functionTimer (){
 
     alert('Sei pronto a giocare?');
 
-    for (var i = 0; i < 5; i++){
+    while (i <= 5){
 
         numUtente = parseInt(prompt('inserisci i numeri'));
-        arrayUtente = [];
-        
-        
-        
+        // arrayUtente.push(numUtente); 
+        console.log(arrayUtente);
+        if (numUtente > 0 || numUtente <= 100){
+            arrayUtente.push(numUtente); 
+        }
+        if (numUtente == 0 || numUtente > 100 || numUtente == isNaN){
+            alert('Puoi inserire solo numeri da 1 a 100');
+        }
+        i ++;
     }
     
 }
 
 
-// Dopo 30 secondi l'utente deve inserire, uno alla volta, i numeri che ha visto precedentemente, tramite il prompt().
+
+// console.log(arrayUtente);
+// console.log(arrayUtente.length);
+
 // Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei numeri da indovinare sono stati individuati
+
+
 
 
 
