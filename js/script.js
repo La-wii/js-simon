@@ -27,9 +27,10 @@ var numUtente;
 var arrayUtente = []; 
 i = 0;
 
+// 30000
 
 
-setTimeout(functionTimer, 30000);
+setTimeout(functionTimer, 5000);
 function functionTimer (){
 
     alert('Sei pronto a giocare?');
@@ -50,18 +51,11 @@ function functionTimer (){
     }
     // Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei numeri da indovinare sono stati individuati
     alert('Hai indovinato' + ' ' + arrayUtente.length + ' ' + 'numeri!' + ' ' + 'Sono:' + ' ' + arrayUtente);
+
     
 }
 
-
-
-
-
-
-
-
-
-
+clearTimeout(functionTimer);
 
 
 
